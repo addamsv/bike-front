@@ -1,0 +1,59 @@
+.ModalWin {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  // position: absolute;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: var(--modal-z-ind);
+}
+
+.content {
+  padding: 20px;
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+  transition: 0.1s transform;
+  transform: scale(0.8);
+  z-index: var(--modal-z-ind);
+}
+
+@keyframes modal-animation-keyframes {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.modalContentAnimation {
+  animation-name: modal-animation-keyframes;
+  animation-duration: 0.25s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.revealed {
+  pointer-events: auto;
+  opacity: 1;
+
+  .content {
+    transform: scale(1);
+  }
+}

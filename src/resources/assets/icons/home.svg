@@ -1,0 +1,6 @@
+<svg viewBox="0 0 90 90">
+  <g transform="scale(1 1)">
+    <path d="M20 50 V85 H80 V50" />
+    <path d="M10 50 L50 15 L90 50 Z" />
+  </g>
+</svg>
